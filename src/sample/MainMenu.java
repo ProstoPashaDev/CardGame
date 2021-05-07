@@ -158,10 +158,11 @@ public class MainMenu {
         return nodelist;
     }
     public ArrayList<Node> createNewDeck(double x, double y){
+        ArrayList<Node> deck = new ArrayList<>();
         ArrayList<Node> nodelist = new ArrayList<>();
         BoarCard boarCard = new BoarCard();
-        Button boar = boarCard.createCardInDeck(x, y);
-        nodelist.add(boar);
+        ArrayList<Node> boarlist = boarCard.createCardInDeck(x, y, deck);
+        nodelist.addAll(boarlist);
         return nodelist;
     }
 }
